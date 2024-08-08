@@ -1,0 +1,27 @@
+<form (ngSubmit)="submitForm()">
+  <div>
+    <label>İlaç Adı:</label>
+    <input type="text" [(ngModel)]="ilacAdi" name="ilacAdi" required>
+  </div>
+  <div>
+    <label>Alınacak Miktar (gram):</label>
+    <input type="number" [(ngModel)]="miktar" name="miktar" required>
+  </div>
+  <div>
+    <label>Alınacak Gün:</label>
+    <select [(ngModel)]="gun" name="gun" required>
+      <option value="Pazartesi">Pazartesi</option>
+      <option value="Salı">Salı</option>
+      <option value="Çarşamba">Çarşamba</option>
+      <option value="Perşembe">Perşembe</option>
+      <option value="Cuma">Cuma</option>
+      <option value="Cumartesi">Cumartesi</option>
+      <option value="Pazar">Pazar</option>
+    </select>
+  </div>
+  <div>
+    <label>Alınacak Saat:</label>
+    <input type="time" [(ngModel)]="saat" name="saat" required>
+  </div>
+  <button type="submit">Kaydet</button>
+</form>
